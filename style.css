@@ -1,0 +1,82 @@
+body {
+-webkit-print-color-adjust:exact;
+margin:0;
+background-color:#F5F5F5;
+font-family: Geneva, Arial, serif, sans-serif;
+font-size:1em;
+}
+
+@page {
+	margin:0;
+}
+
+#wrapper {
+	width:210mm;
+	height:297mm;
+	margin:0 auto;
+}
+
+#left_col {
+	float:left;
+	width:30%;
+	height:100%;
+	background-color:silver;
+}
+
+#right_col {
+	float:left;
+	width:70%;
+	height:100%;
+	background-color:grey;
+}
+
+#education {
+	padding:0 0 0 1em;
+}
+
+#work {
+	padding-left:1em;
+}
+
+.timeline-item {
+padding:10px;
+border-left: 2px solid silver;
+position:relative;
+}
+
+.timeline-item::before {
+content:attr(date-is);
+position:absolute;
+top:5px;
+left:10px;
+display:block;
+font-weight:bold;
+}
+
+.timeline-item::after {
+width: 10px;
+height: 10px;
+display: block;
+top: 5px;
+left: -8px;
+position: absolute;
+border-radius: 10px;
+content: '';
+border: 2px solid rgba(0, 0, 0, 0.3);
+background: white;
+}
+
+.timeline-item:last-child {
+  -o-border-image: linear-gradient(to bottom, silver 60%, transparent) 1 100%;
+     border-image: -webkit-linear-gradient(top, silver 60%, transparent) 1 100%;
+     border-image: linear-gradient(to bottom, silver 60%, transparent) 1 100%;
+}
+
+#name {
+	text-align:center;
+}
+
+#personal_info {
+padding-right:20px;
+text-align:justify;
+}
